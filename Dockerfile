@@ -6,4 +6,5 @@ WORKDIR /qdata
 
 COPY ./entrypoint.sh .
 
-ENTRYPOINT ["./entrypoint.sh"]
+CMD [ "ls" ]
+#ENTRYPOINT ["./entrypoint.sh"]
