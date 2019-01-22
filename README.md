@@ -4,9 +4,19 @@ Run multiple Quorum nodes in a single docker container
 
 Inspired by https://github.com/ConsenSys/quorum-docker-Nnodes
 
-I wanted to use Quorum for running tests in a C.I environment, also it was very important to me to have a known state, in this case I wanted to know the accounts as in Ganache. For instance, when we run [ganache-cli](https://github.com/trufflesuite/ganache-cli), we can specify a flag (-m or --mnemonic) in the cli options that makes the account generation deterministic, that means that every time you run ganache with a 
+I wanted to use Quorum for running tests in a C.I environment, also it was very important to me to have a known state, in this case I wanted to know the accounts as in Ganache. For instance, when we run [ganache-cli](https://github.com/trufflesuite/ganache-cli), we can specify a flag (-m or --mnemonic) in the cli options that makes the account generation deterministic, that means that every time you run ganache with a certain [mnemonic phrase](https://en.bitcoin.it/wiki/Seed_phrase) it will generate the same accounts.
 
-Taking that idea, how could I extend that behaviour and always have already known accounts per node? So I managed to use the same private keys as in ganache (At this point only the first 4 accounts) and import each one to a different node.
+Taking that idea, how could I extend that behaviour and always have already known accounts per node? So I managed to use the same private keys as in ganache (At this point only the first 4 accounts) and import each one to a different node. These account are also added to the "alloc" field in the genesis.json file and I added some initial ether.
+
+## Commands
+
+Build the image
+
+> docker build -t <container-name> .
+  
+Run the image
+
+> docker run -p 22001-22004:22001-22004 docker-tessera sh // TODO
 
 ## Notes
 
