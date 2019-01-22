@@ -109,9 +109,6 @@ cat >> genesis.json <<EOF
 }
 EOF
 
-# cat genesis.json 
-# ls the genesis and static are in root (qdata)
-
 #### Initialize nodes #######################
 
 ARGS_NOMINER="--nodiscover --istanbul.blockperiod 5 --syncmode full --verbosity 5 --debug --metrics --gasprice 0 --nat none"
