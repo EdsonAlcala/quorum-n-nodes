@@ -1,14 +1,20 @@
-# quorum-n-nodes
+# Quorum-n-nodes
 
 Run multiple Quorum nodes in a single docker container
 
-# Notes
+Inspired by https://github.com/ConsenSys/quorum-docker-Nnodes
 
-To generate the extradata field
+I wanted to use Quorum for running tests in a C.I environment, also it was very important to me to have a known state, in this case I wanted to know the accounts as in Ganache. For instance, when we run [ganache-cli](https://github.com/trufflesuite/ganache-cli), we can specify a flag (-m or --mnemonic) in the cli options that makes the account generation deterministic, that means that every time you run ganache with a 
+
+Taking that idea, how could I extend that behaviour and always have already known accounts per node? So I managed to use the same private keys as in ganache (At this point only the first 4 accounts) and import each one to a different node.
+
+## Notes
+
+To generate the extradata field in genesis.json
 
 https://raw.githubusercontent.com/getamis/istanbul-tools/master/cmd/istanbul/example/config.toml
 
-# References
+## References
 
 https://github.com/jpmorganchase/quorum-examples/blob/master/examples/7nodes/tessera-init.sh
 
