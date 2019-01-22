@@ -138,4 +138,4 @@ PRIVATE_CONFIG=ignore nohup geth --datadir qdata_3/dd --nodekey qdata_3/nodekey 
 
 #### Start node 4 #######################
 geth --datadir qdata_4/dd init genesis.json
-PRIVATE_CONFIG=ignore nohup geth --datadir qdata_4/dd --nodekey qdata_4/nodekey --networkid 2017 --identity "Node 4" $ARGS $RPC_ARGS --rpccorsdomain "*" --rpcport 22004 --port 33004 --unlock 0 --password qdata_4/password.txt 2>>qdata_4/logs/geth.log &
+PRIVATE_CONFIG=ignore nohup geth --datadir qdata_4/dd --nodekey qdata_4/nodekey --networkid 2017 --identity "Node 4" $ARGS $RPC_ARGS --rpccorsdomain "*" --rpcport 22004 --port 33004 --unlock 0 --password qdata_4/password.txt 2>>qdata_4/logs/geth.log # & temporal fix to keep the container alive but I should another way
