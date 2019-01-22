@@ -1,0 +1,25 @@
+stages:
+    - build
+
+docker build and publish:
+  stage: build
+  image: docker:stable
+  services:
+    - docker:dind
+  variables:
+    DOCKER_DRIVER: overlay2
+    DOCKER_HOST: tcp://docker:2375/
+    REPOSITORY_URI: edsonalcala
+    PROJECT_NAME: quorum-n-nodes
+  script:
+    - SHORT_SHA=${CI_COMMIT_SHA:0:8}
+    - echo "$SHORT_SHA"
+    - echo "$PROJECT_NAME"
+    - echo $DOCKER_PASSWORD | docker login -u $DOCKER_ID --password-stdin
+    - IMAGE_ID=$(docker build --pull --quiet --tag $PROJECT_NAME:$SHORT_SHA .)
+    - echo "$IMAGE_ID"
+    - docker images
+    - docker tag $PROJECT_NAME:$SHORT_SHA $REPOSITORY_URI/$PROJECT_NAME:latest
+    - echo "Pushing to remote repository"
+    - docker --debug push $REPOSITORY_URI/$PROJECT_NAME:latest
+    - rm -f /root/.docker/config.json

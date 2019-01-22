@@ -12,13 +12,23 @@ Taking that idea, how could I extend that behaviour and always have already know
 
 ## Commands
 
-Build the image
+Get the latest version for the docker registry
+
+> docker pull edsonalcala/quorum-n-nodes:latest
+
+If you want to build the image locally
+
+> git clone https://github.com/EdsonAlcala/quorum-n-nodes
+
+Then build the image
 
 > docker build -t <container-name> .
-  
-Run the image
 
-> docker run -p 22001-22004:22001-22004 docker-tessera sh // TODO
+## Usage
+
+You can simply run:
+
+> docker run -it -p 22001-22004:22001-22004 edsonalcala/quorum-n-nodes:latest 
 
 ## Notes
 
@@ -35,3 +45,5 @@ https://github.com/jpmorganchase/quorum-examples/blob/master/examples/7nodes/ist
 https://github.com/ethereum/go-ethereum/wiki/Setting-up-private-network-or-local-cluster
 
 https://github.com/ethereum/go-ethereum/wiki/Command-Line-Options
+
+https://github.com/ConsenSys/qbc/blob/master/docs/HOWTO.md
