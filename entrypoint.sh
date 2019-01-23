@@ -87,10 +87,12 @@ cat >> genesis.json <<EOF
   "config": {
       "chainId": 2017,
       "homesteadBlock": 1,
+      "byzantiumBlock": 1,
       "eip150Block": 2,
       "eip150Hash": "0x0000000000000000000000000000000000000000000000000000000000000000",
       "eip155Block": 3,
       "eip158Block": 3,
+      "eip211Block": 3,
       "istanbul": {
         "epoch": 30000,
         "policy": 0
@@ -111,7 +113,7 @@ EOF
 
 #### Initialize nodes #######################
 
-ARGS_NOMINER="--nodiscover --istanbul.blockperiod 5 --syncmode full --verbosity 5 --debug --metrics --gasprice 0 --nat none"
+ARGS_NOMINER="--nodiscover --istanbul.blockperiod 1 --syncmode full --verbosity 5 --debug --metrics --gasprice 0 --nat none"
 ARGS="--nodiscover --istanbul.blockperiod 5 --syncmode full --mine --minerthreads 1 --verbosity 5 --debug --metrics --gasprice 0 --nat none"
 RPC_ARGS="--rpc --rpcaddr 0.0.0.0 --rpcapi admin,db,eth,debug,miner,net,shh,txpool,personal,web3,quorum,istanbul"
 
