@@ -30,6 +30,12 @@ You can simply run:
 
 > docker run -d -p 22001-22004:22001-22004 edsonalcala/quorum-n-nodes:latest
 
+## Future work
+
+Please refer to this issue to see the planned work
+
+https://github.com/EdsonAlcala/quorum-n-nodes/issues/1
+
 ## Notes
 
 To generate the extradata field in genesis.json
