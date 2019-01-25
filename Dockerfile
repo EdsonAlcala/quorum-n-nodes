@@ -4,6 +4,12 @@ RUN mkdir -p /qdata
 
 WORKDIR /qdata
 
-COPY ./entrypoint.sh .
+EXPOSE 22001-22004
 
-CMD ["./entrypoint.sh"]
+EXPOSE 9001-9004
+
+COPY . .
+
+RUN chmod -R 777 ./
+
+ENTRYPOINT [ "./setup.sh" ]
