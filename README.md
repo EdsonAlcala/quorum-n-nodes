@@ -28,7 +28,9 @@ Then build the image
 
 You can simply run:
 
-> docker run -d -p 22001-22004:22001-22004 edsonalcala/quorum-n-nodes:latest
+> docker run -t -d --name quorum-n-nodes -p 22001-22004:22001-22004 edsonalcala/quorum-n-nodes:latest
+
+> docker exec -it quorum-n-nodes start-nodes
 
 ## Future work
 

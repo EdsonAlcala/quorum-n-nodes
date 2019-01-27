@@ -12,4 +12,7 @@ COPY . .
 
 RUN chmod -R 777 ./
 
-ENTRYPOINT [ "./setup.sh" ]
+RUN echo -e '#!/bin/sh \n /qdata/setup.sh ' > /usr/bin/start-nodes && \
+    chmod +x /usr/bin/start-nodes 
+
+CMD [ "sh" ]

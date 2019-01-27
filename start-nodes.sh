@@ -20,6 +20,8 @@ PRIVATE_CONFIG=qdata_3/tessera3/tm.ipc nohup geth --datadir qdata_3/dd --nodekey
 
 #### Start node 4 #######################
 geth --datadir qdata_4/dd init genesis.json
-PRIVATE_CONFIG=qdata_4/tessera4/tm.ipc nohup geth --datadir qdata_4/dd --nodekey qdata_4/nodekey --networkid 2017 --identity "Node 4" $ARGS $RPC_ARGS --rpccorsdomain "*" --rpcport 22004 --port 33004 --unlock 0 --password qdata_4/password.txt 2>>qdata_4/logs/geth.log # & temporal hack
+PRIVATE_CONFIG=qdata_4/tessera4/tm.ipc nohup geth --datadir qdata_4/dd --nodekey qdata_4/nodekey --networkid 2017 --identity "Node 4" $ARGS $RPC_ARGS --rpccorsdomain "*" --rpcport 22004 --port 33004 --unlock 0 --password qdata_4/password.txt 2>>qdata_4/logs/geth.log &
 
 echo "All nodes configured."
+
+exit 0
