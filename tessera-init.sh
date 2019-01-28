@@ -2,12 +2,11 @@
 
 echo "[*] Initialising Tessera configuration"
 
-currentDir=$(pwd)
 for i in {1..4}
 do
-    DDIR="${currentDir}/qdata_${i}/tessera${i}"
+    DDIR="/qdata/qdata_${i}/tessera${i}"
     mkdir -p ${DDIR}
-    mkdir -p qdata_${i}/tessera${i}/logs
+    mkdir -p ${DDIR}/logs
     cp "keys/tm${i}.pub" "${DDIR}/tm.pub"
     cp "keys/tm${i}.key" "${DDIR}/tm.key"
     rm -f "${DDIR}/tm.ipc"

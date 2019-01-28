@@ -2,10 +2,9 @@
 
 echo "Starting Tessera"
 
-currentDir=$(pwd)
 for i in {1..4}
 do
-    DDIR="${currentDir}/qdata_${i}/tessera${i}"
+    DDIR="/qdata/qdata_${i}/tessera${i}"
     # CMD="tessera -configfile $DDIR/tessera-config$i.json"
     # echo "$CMD >> qdata_${i}/tessera${i}/logs/tessera$i.log 2>&1 &"
     # ${CMD} >> "qdata_${i}/tessera${i}/logs/tessera$i.log" 2>&1 &

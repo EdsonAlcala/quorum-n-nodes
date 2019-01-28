@@ -1,4 +1,4 @@
-FROM edsonalcala/quorum-tessera-alpine:latest
+FROM edsonalcala/quorum-tessera-alpine:2.2.1-quorum
 
 RUN mkdir -p /qdata
 
