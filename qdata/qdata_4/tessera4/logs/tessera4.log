@@ -1,0 +1,84 @@
+15:36:14.827 [main] INFO  eclipselink.logging.all - EclipseLink, version: Eclipse Persistence Services - 2.7.3.v20180807-4be1041
+15:36:15.696 [main] INFO  eclipselink.logging.connection - tessera login successful
+15:36:15.803 [main] WARN  eclipselink.logging.ddl - Removing UNIQUE constraint definition from [ENCRYPTED_TRANSACTION.HASH] because it is also a primary key.
+15:36:15.811 [main] WARN  eclipselink.logging.ddl - Removing UNIQUE constraint definition from [ENCRYPTED_RAW_TRANSACTION.HASH] because it is also a primary key.
+15:36:15.834 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'tessera'
+15:36:16.400 [main] INFO  c.q.t.t.TesseraScheduledExecutor - Starting PartyInfoPoller
+15:36:16.421 [main] INFO  c.q.t.t.TesseraScheduledExecutor - Started PartyInfoPoller
+15:36:16.471 [main] INFO  c.q.t.t.TesseraScheduledExecutor - Starting SyncPoller
+15:36:16.491 [main] INFO  c.q.t.t.TesseraScheduledExecutor - Started SyncPoller
+15:36:17.211 [main] INFO  o.g.grizzly.servlet.WebappContext - Starting application [WebappContext] ...
+15:36:18.356 [main] INFO  o.g.grizzly.servlet.WebappContext - [WebappContext] Servlet [org.glassfish.jersey.servlet.ServletContainer] registered for url pattern(s) [[/*]].
+15:36:18.364 [main] INFO  o.g.grizzly.servlet.WebappContext - Application [WebappContext] is ready to service requests.  Root: [].
+15:36:18.365 [main] INFO  c.quorum.tessera.server.JerseyServer - Starting http://localhost:9084
+15:36:18.833 [main] INFO  o.g.g.http.server.NetworkListener - Started listener bound to [localhost:9084]
+15:36:18.835 [main] INFO  o.g.grizzly.http.server.HttpServer - [HttpServer] Started.
+15:36:18.835 [main] INFO  c.quorum.tessera.server.JerseyServer - Started http://localhost:9084
+15:36:18.836 [main] INFO  c.quorum.tessera.server.JerseyServer - WADL http://localhost:9084/application.wadl
+15:36:18.837 [main] INFO  c.q.tessera.server.UnixSocketServer - Starting the Unix Domain Socket server
+15:36:19.608 [main] INFO  o.g.grizzly.servlet.WebappContext - Starting application [WebappContext] ...
+15:36:19.802 [main] INFO  o.g.grizzly.servlet.WebappContext - [WebappContext] Servlet [org.glassfish.jersey.servlet.ServletContainer] registered for url pattern(s) [[/*]].
+15:36:19.803 [main] INFO  o.g.grizzly.servlet.WebappContext - Application [WebappContext] is ready to service requests.  Root: [].
+15:36:19.803 [main] INFO  c.quorum.tessera.server.JerseyServer - Starting http://localhost:9004
+15:36:19.952 [main] INFO  o.g.g.http.server.NetworkListener - Started listener bound to [localhost:9004]
+15:36:19.952 [main] INFO  o.g.grizzly.http.server.HttpServer - [HttpServer-1] Started.
+15:36:19.953 [main] INFO  c.quorum.tessera.server.JerseyServer - Started http://localhost:9004
+15:36:19.953 [main] INFO  c.quorum.tessera.server.JerseyServer - WADL http://localhost:9004/application.wadl
+15:36:20.466 [grizzly-http-server-3] INFO  c.q.tessera.api.filter.LoggingFilter - Enter Request : POST : /resend
+15:36:20.614 [grizzly-http-server-3] INFO  c.q.t.t.EncryptedTransactionDAOImpl - Fetching all EncryptedTransaction database rows
+15:36:20.772 [grizzly-http-server-5] INFO  c.q.t.api.common.UpCheckResource - GET upcheck
+15:36:21.012 [grizzly-http-server-3] INFO  c.q.tessera.api.filter.LoggingFilter - Exit Request : POST : /resend
+15:36:21.013 [grizzly-http-server-3] INFO  c.q.tessera.api.filter.LoggingFilter - Response for resend : 200 OK
+15:36:21.815 [grizzly-http-server-2] INFO  c.q.tessera.api.filter.LoggingFilter - Enter Request : POST : /resend
+15:36:21.816 [grizzly-http-server-1] INFO  c.q.tessera.api.filter.LoggingFilter - Enter Request : POST : /resend
+15:36:21.818 [grizzly-http-server-2] INFO  c.q.t.t.EncryptedTransactionDAOImpl - Fetching all EncryptedTransaction database rows
+15:36:21.820 [grizzly-http-server-2] INFO  c.q.tessera.api.filter.LoggingFilter - Exit Request : POST : /resend
+15:36:21.821 [grizzly-http-server-2] INFO  c.q.tessera.api.filter.LoggingFilter - Response for resend : 200 OK
+15:36:21.841 [grizzly-http-server-1] INFO  c.q.t.t.EncryptedTransactionDAOImpl - Fetching all EncryptedTransaction database rows
+15:36:21.842 [grizzly-http-server-1] INFO  c.q.tessera.api.filter.LoggingFilter - Exit Request : POST : /resend
+15:36:21.843 [grizzly-http-server-1] INFO  c.q.tessera.api.filter.LoggingFilter - Response for resend : 200 OK
+15:36:27.429 [jersey-server-managed-async-executor-0] INFO  c.q.t.api.common.UpCheckResource - GET upcheck
+15:37:15.324 [grizzly-http-server-7] INFO  c.q.tessera.api.filter.LoggingFilter - Enter Request : POST : /resend
+15:37:15.327 [grizzly-http-server-5] INFO  c.q.tessera.api.filter.LoggingFilter - Enter Request : POST : /resend
+15:37:15.687 [grizzly-http-server-7] INFO  c.q.t.t.EncryptedTransactionDAOImpl - Fetching all EncryptedTransaction database rows
+15:37:15.687 [grizzly-http-server-5] INFO  c.q.t.t.EncryptedTransactionDAOImpl - Fetching all EncryptedTransaction database rows
+15:37:15.840 [grizzly-http-server-5] INFO  c.q.tessera.api.filter.LoggingFilter - Exit Request : POST : /resend
+15:37:15.841 [grizzly-http-server-5] INFO  c.q.tessera.api.filter.LoggingFilter - Response for resend : 200 OK
+15:37:15.840 [grizzly-http-server-7] INFO  c.q.tessera.api.filter.LoggingFilter - Exit Request : POST : /resend
+15:37:15.846 [grizzly-http-server-7] INFO  c.q.tessera.api.filter.LoggingFilter - Response for resend : 200 OK
+15:37:15.863 [grizzly-http-server-0] INFO  c.q.tessera.api.filter.LoggingFilter - Enter Request : POST : /resend
+15:37:15.866 [grizzly-http-server-0] INFO  c.q.t.t.EncryptedTransactionDAOImpl - Fetching all EncryptedTransaction database rows
+15:37:15.869 [grizzly-http-server-4] INFO  c.q.tessera.api.filter.LoggingFilter - Enter Request : POST : /resend
+15:37:15.879 [grizzly-http-server-4] INFO  c.q.t.t.EncryptedTransactionDAOImpl - Fetching all EncryptedTransaction database rows
+15:37:15.883 [grizzly-http-server-4] INFO  c.q.tessera.api.filter.LoggingFilter - Exit Request : POST : /resend
+15:37:15.883 [grizzly-http-server-4] INFO  c.q.tessera.api.filter.LoggingFilter - Response for resend : 200 OK
+15:37:15.885 [grizzly-http-server-0] INFO  c.q.tessera.api.filter.LoggingFilter - Exit Request : POST : /resend
+15:37:15.886 [grizzly-http-server-0] INFO  c.q.tessera.api.filter.LoggingFilter - Response for resend : 200 OK
+15:37:19.818 [grizzly-http-server-5] INFO  c.q.tessera.api.filter.LoggingFilter - Enter Request : POST : /resend
+15:37:19.823 [grizzly-http-server-5] INFO  c.q.t.t.EncryptedTransactionDAOImpl - Fetching all EncryptedTransaction database rows
+15:37:19.827 [grizzly-http-server-5] INFO  c.q.tessera.api.filter.LoggingFilter - Exit Request : POST : /resend
+15:37:19.827 [grizzly-http-server-5] INFO  c.q.tessera.api.filter.LoggingFilter - Response for resend : 200 OK
+15:40:45.084 [jersey-server-managed-async-executor-1] INFO  c.q.tessera.api.filter.LoggingFilter - Enter Request : GET : /receiveraw
+15:40:45.170 [jersey-server-managed-async-executor-1] INFO  c.q.t.t.TransactionManagerImpl - Lookup transaction V6vUQ8cdGopooNAWyeZZy9kYDf864Och3UxFM2PfwNju2BQOZbktuQtceY8bHH5/y6P8vhwtmManQLCiRSEwaw==
+15:40:45.171 [jersey-server-managed-async-executor-1] INFO  c.q.t.t.EncryptedTransactionDAOImpl - Retrieving payload with hash V6vUQ8cdGopooNAWyeZZy9kYDf864Och3UxFM2PfwNju2BQOZbktuQtceY8bHH5/y6P8vhwtmManQLCiRSEwaw==
+15:40:45.295 [jersey-server-managed-async-executor-1] INFO  c.q.t.a.e.TransactionNotFoundExceptionMapper - Message with hash V6vUQ8cdGopooNAWyeZZy9kYDf864Och3UxFM2PfwNju2BQOZbktuQtceY8bHH5/y6P8vhwtmManQLCiRSEwaw== was not found
+15:40:45.296 [jersey-server-managed-async-executor-1] INFO  c.q.tessera.api.filter.LoggingFilter - Exit Request : GET : /receiveraw
+15:40:45.297 [jersey-server-managed-async-executor-1] INFO  c.q.tessera.api.filter.LoggingFilter - Response for receiveraw : 404 Not Found
+15:41:30.040 [jersey-server-managed-async-executor-2] INFO  c.q.tessera.api.filter.LoggingFilter - Enter Request : GET : /receiveraw
+15:41:30.048 [jersey-server-managed-async-executor-2] INFO  c.q.t.t.TransactionManagerImpl - Lookup transaction B+gTnXczwiynvBL95DvAA9h9qCnt9O1JgaArLotiDr3pMBr2qTHPvzUGGPXOZHMvgk+HzbM7HnVOcS8IP1Pang==
+15:41:30.049 [jersey-server-managed-async-executor-2] INFO  c.q.t.t.EncryptedTransactionDAOImpl - Retrieving payload with hash B+gTnXczwiynvBL95DvAA9h9qCnt9O1JgaArLotiDr3pMBr2qTHPvzUGGPXOZHMvgk+HzbM7HnVOcS8IP1Pang==
+15:41:30.060 [jersey-server-managed-async-executor-2] INFO  c.q.t.a.e.TransactionNotFoundExceptionMapper - Message with hash B+gTnXczwiynvBL95DvAA9h9qCnt9O1JgaArLotiDr3pMBr2qTHPvzUGGPXOZHMvgk+HzbM7HnVOcS8IP1Pang== was not found
+15:41:30.061 [jersey-server-managed-async-executor-2] INFO  c.q.tessera.api.filter.LoggingFilter - Exit Request : GET : /receiveraw
+15:41:30.063 [jersey-server-managed-async-executor-2] INFO  c.q.tessera.api.filter.LoggingFilter - Response for receiveraw : 404 Not Found
+15:43:05.077 [jersey-server-managed-async-executor-3] INFO  c.q.tessera.api.filter.LoggingFilter - Enter Request : GET : /receiveraw
+15:43:05.131 [jersey-server-managed-async-executor-3] INFO  c.q.t.t.TransactionManagerImpl - Lookup transaction 5dZcI3qQh5a+vfOSwoMG15esQeW5LVXJQz0VC8Qems7mNVvlcmBrvUoftUQoddLC38GIbN3tBCSuMGB64qnxww==
+15:43:05.133 [jersey-server-managed-async-executor-3] INFO  c.q.t.t.EncryptedTransactionDAOImpl - Retrieving payload with hash 5dZcI3qQh5a+vfOSwoMG15esQeW5LVXJQz0VC8Qems7mNVvlcmBrvUoftUQoddLC38GIbN3tBCSuMGB64qnxww==
+15:43:05.149 [jersey-server-managed-async-executor-3] INFO  c.q.t.a.e.TransactionNotFoundExceptionMapper - Message with hash 5dZcI3qQh5a+vfOSwoMG15esQeW5LVXJQz0VC8Qems7mNVvlcmBrvUoftUQoddLC38GIbN3tBCSuMGB64qnxww== was not found
+15:43:05.150 [jersey-server-managed-async-executor-3] INFO  c.q.tessera.api.filter.LoggingFilter - Exit Request : GET : /receiveraw
+15:43:05.151 [jersey-server-managed-async-executor-3] INFO  c.q.tessera.api.filter.LoggingFilter - Response for receiveraw : 404 Not Found
+15:46:45.046 [jersey-server-managed-async-executor-3] INFO  c.q.tessera.api.filter.LoggingFilter - Enter Request : GET : /receiveraw
+15:46:45.074 [jersey-server-managed-async-executor-3] INFO  c.q.t.t.TransactionManagerImpl - Lookup transaction uJ4Wn7vKih8UGd6xzS6cNsRQoyhBGF9vvnWExu+iILQHDcOCyCsF4EGMJ6zlpGIecnCOclO8O6epgzFJ5apwWw==
+15:46:45.074 [jersey-server-managed-async-executor-3] INFO  c.q.t.t.EncryptedTransactionDAOImpl - Retrieving payload with hash uJ4Wn7vKih8UGd6xzS6cNsRQoyhBGF9vvnWExu+iILQHDcOCyCsF4EGMJ6zlpGIecnCOclO8O6epgzFJ5apwWw==
+15:46:45.077 [jersey-server-managed-async-executor-3] INFO  c.q.t.a.e.TransactionNotFoundExceptionMapper - Message with hash uJ4Wn7vKih8UGd6xzS6cNsRQoyhBGF9vvnWExu+iILQHDcOCyCsF4EGMJ6zlpGIecnCOclO8O6epgzFJ5apwWw== was not found
+15:46:45.077 [jersey-server-managed-async-executor-3] INFO  c.q.tessera.api.filter.LoggingFilter - Exit Request : GET : /receiveraw
+15:46:45.078 [jersey-server-managed-async-executor-3] INFO  c.q.tessera.api.filter.LoggingFilter - Response for receiveraw : 404 Not Found

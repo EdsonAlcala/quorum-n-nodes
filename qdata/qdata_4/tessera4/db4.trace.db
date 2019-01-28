@@ -1,0 +1,6 @@
+2019-01-28 15:36:15 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Table "ENCRYPTED_TRANSACTION" not found; SQL statement:
+SELECT 1 FROM ENCRYPTED_TRANSACTION [42102-197]
+2019-01-28 15:36:15 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Table "ENCRYPTED_RAW_TRANSACTION" not found; SQL statement:
+SELECT 1 FROM ENCRYPTED_RAW_TRANSACTION [42102-197]

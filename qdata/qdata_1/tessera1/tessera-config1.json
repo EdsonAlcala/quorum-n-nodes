@@ -1,0 +1,80 @@
+{
+    "useWhiteList": false,
+    "jdbc": {
+        "username": "sa",
+        "password": "",
+        "url": "jdbc:h2:/qdata/qdata_1/tessera1/db1;MODE=Oracle;TRACE_LEVEL_SYSTEM_OUT=0",
+        "autoCreateTables": true
+    },
+    "serverConfigs":[
+        {
+            "app":"ThirdParty",
+            "enabled": true,
+            "serverSocket":{
+                "type":"INET",
+                "port": 9081,
+                "hostName": "http://localhost"
+            },
+            "communicationType" : "REST"
+        },
+        {
+            "app":"Q2T",
+            "enabled": true,
+            "serverSocket":{
+                "type":"UNIX",
+                "path":"/qdata/qdata_1/tessera1/tm.ipc"
+            },
+            "communicationType" : "UNIX_SOCKET"
+        },
+        {
+            "app":"P2P",
+            "enabled": true,
+            "serverSocket":{
+                "type":"INET",
+                "port": 9001,
+                "hostName": "http://localhost"
+            },
+            "sslConfig": {
+                "tls": "OFF",
+                "generateKeyStoreIfNotExisted": true,
+                "serverKeyStore": "/qdata/qdata_1/tessera1/server1-keystore",
+                "serverKeyStorePassword": "quorum",
+                "serverTrustStore": "/qdata/qdata_1/tessera1/server-truststore",
+                "serverTrustStorePassword": "quorum",
+                "serverTrustMode": "TOFU",
+                "knownClientsFile": "/qdata/qdata_1/tessera1/knownClients",
+                "clientKeyStore": "/qdata/qdata_1/tessera1/client1-keystore",
+                "clientKeyStorePassword": "quorum",
+                "clientTrustStore": "/qdata/qdata_1/tessera1/client-truststore",
+                "clientTrustStorePassword": "quorum",
+                "clientTrustMode": "TOFU",
+                "knownServersFile": "/qdata/qdata_1/tessera1/knownServers"
+            },
+            "communicationType" : "REST"
+        }
+    ],
+    "peer": [
+        {
+            "url": "http://localhost:9001"
+        },
+        {
+            "url": "http://localhost:9002"
+        },
+        {
+            "url": "http://localhost:9003"
+        },
+        {
+            "url": "http://localhost:9004"
+        }
+    ],
+    "keys": {
+        "passwords": [],
+        "keyData": [
+            {
+                "privateKeyPath": "/qdata/qdata_1/tessera1/tm.key",
+                "publicKeyPath": "/qdata/qdata_1/tessera1/tm.pub"
+            }
+        ]
+    },
+    "alwaysSendTo": []
+}

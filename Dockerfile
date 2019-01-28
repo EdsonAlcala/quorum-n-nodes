@@ -1,4 +1,4 @@
-FROM edsonalcala/quorum-tessera-alpine:latest
+FROM edsonalcala/quorum-tessera-alpine:2.1.1-quorum
 
 RUN mkdir -p /qdata
 
@@ -8,7 +8,7 @@ EXPOSE 22001-22004
 
 EXPOSE 9001-9004
 
-COPY . .
+# COPY ./keys ./qdata
 
 RUN chmod -R 777 ./
 
