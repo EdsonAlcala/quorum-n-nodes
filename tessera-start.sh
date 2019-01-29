@@ -4,13 +4,13 @@ echo "Starting Tessera"
 
 for i in {1..4}
 do
-    DDIR="qdata_${i}/tessera${i}"
+    DDIR="qdata_$i/tessera$i"
     #Only set heap size if not specified on command line
     MEMORY="-Xms128M -Xmx128M"
 
     CMD="java $MEMORY -jar /tessera/tessera-app.jar -configfile $DDIR/tessera-config$i.json"
-    echo "$CMD >> qdata_${i}/tessera${i}/logs/tessera$i.log 2>&1 &"
-    ${CMD} >> "qdata_${i}/tessera${i}/logs/tessera$i.log" 2>&1 &
+    echo "$CMD >> qdata_$i/tessera$i/logs/tessera$i.log 2>&1 &"
+    ${CMD} >> "qdata_$i/tessera$i/logs/tessera$i.log" 2>&1 &
     sleep 1
 done
 
@@ -47,6 +47,6 @@ while ${DOWN}; do
     sleep 5
 done
 
-echo "All Tessera nodes started"
-cd /qdata/qdata_1/tessera1
-ls
+echo "All Tessera nodes started..."
+
+exit 0
