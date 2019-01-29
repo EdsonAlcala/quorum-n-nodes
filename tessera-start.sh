@@ -5,11 +5,6 @@ echo "Starting Tessera"
 for i in {1..4}
 do
     DDIR="/qdata/qdata_${i}/tessera${i}"
-    # CMD="tessera -configfile $DDIR/tessera-config$i.json"
-    # echo "$CMD >> qdata_${i}/tessera${i}/logs/tessera$i.log 2>&1 &"
-    # ${CMD} >> "qdata_${i}/tessera${i}/logs/tessera$i.log" 2>&1 &
-    # sleep 1
-
     #Only set heap size if not specified on command line
     MEMORY="-Xms128M -Xmx128M"
 

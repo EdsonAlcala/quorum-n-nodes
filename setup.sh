@@ -14,7 +14,7 @@ n=1
 for pk in ${privateKeys[*]}
 do
     qd=qdata_$n
-    mkdir -p $qd/{logs,keys}
+    mkdir -p $qd/{logs}
     mkdir -p $qd/dd/geth
     let n++
 done
