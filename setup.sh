@@ -14,7 +14,7 @@ n=1
 for pk in ${privateKeys[*]}
 do
     qd=qdata_$n
-    mkdir -p $qd/{logs}
+    mkdir -p $qd/logs
     mkdir -p $qd/dd/geth
     let n++
 done
@@ -125,5 +125,5 @@ done
 rm -f ./static-nodes.json
 
 ./tessera-init.sh
-./tessera-start.sh
+./tessera-start.sh 
 ./start-nodes.sh
