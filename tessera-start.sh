@@ -4,7 +4,7 @@ echo "Starting Tessera"
 
 for i in {1..4}
 do
-    DDIR="/qdata/qdata_${i}/tessera${i}"
+    DDIR="qdata_${i}/tessera${i}"
     #Only set heap size if not specified on command line
     MEMORY="-Xms128M -Xmx128M"
 
@@ -48,3 +48,5 @@ while ${DOWN}; do
 done
 
 echo "All Tessera nodes started"
+cd /qdata/qdata_1/tessera1
+ls
