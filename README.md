@@ -30,7 +30,7 @@ You can simply run:
 
 > docker run -t -d --name quorum-n-nodes -p 22001-22004:22001-22004 edsonalcala/quorum-n-nodes:1.1-alpine
 
-> docker exec -it quorum-n-nodes bash setup.sh
+> docker exec -it quorum-n-nodes start-nodes
 
 ## Future work
 
