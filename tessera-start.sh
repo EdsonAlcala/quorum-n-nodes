@@ -5,10 +5,13 @@ echo "Starting Tessera"
 for i in {1..4}
 do
     DDIR="qdata_$i/tessera$i"
+    mkdir -p ${DDIR}
+    mkdir -p ${DDIR}/logs
+    rm -f "$DDIR/tm.ipc"
     #Only set heap size if not specified on command line
     MEMORY="-Xms128M -Xmx128M"
 
-    CMD="java $MEMORY -jar /tessera/tessera-app.jar -configfile $DDIR/tessera-config$i.json"
+    CMD="nohup java $MEMORY -jar /tessera/tessera-app.jar -configfile $DDIR/tessera-config$i.json"
     echo "$CMD >> qdata_$i/tessera$i/logs/tessera$i.log 2>&1 &"
     ${CMD} >> "qdata_$i/tessera$i/logs/tessera$i.log" 2>&1 &
     sleep 1
@@ -22,6 +25,8 @@ while ${DOWN}; do
     DOWN=false
     for i in {1..4}
     do
+        DDIR="qdata_$i/tessera$i"
+        
         if [ ! -S "$DDIR/tm.ipc" ]; then
             echo "Node ${i} is not yet listening on tm.ipc"
             DOWN=true
@@ -48,5 +53,7 @@ while ${DOWN}; do
 done
 
 echo "All Tessera nodes started..."
+
+sleep 2
 
 exit 0
