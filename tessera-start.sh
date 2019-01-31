@@ -5,9 +5,7 @@ echo "Starting Tessera"
 for i in {1..4}
 do
     DDIR="qdata_$i/tessera$i"
-    mkdir -p ${DDIR}
-    mkdir -p ${DDIR}/logs
-    rm -f "$DDIR/tm.ipc"
+    
     #Only set heap size if not specified on command line
     MEMORY="-Xms128M -Xmx128M"
 

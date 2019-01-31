@@ -9,7 +9,6 @@ do
     mkdir -p ${DDIR}/logs
     cp "keys/tm${i}.pub" "${DDIR}/tm.pub"
     cp "keys/tm${i}.key" "${DDIR}/tm.key"
-    rm -f "${DDIR}/tm.ipc"
     
     cat <<EOF > ${DDIR}/tessera-config${i}.json
 {
