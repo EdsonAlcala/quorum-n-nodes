@@ -124,6 +124,3 @@ done
 
 rm -f ./static-nodes.json
 
-./tessera-init.sh
-./tessera-start.sh 
-./start-nodes.sh
