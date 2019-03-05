@@ -3,7 +3,7 @@
 #### Initialize nodes #######################
 
 ARGS_NOMINER="--nodiscover --istanbul.blockperiod 1 --syncmode full --verbosity 5 --debug --metrics --gasprice 0 --nat none"
-ARGS="--nodiscover --istanbul.blockperiod 5 --syncmode full --mine --minerthreads 1 --verbosity 5 --debug --metrics --gasprice 0 --nat none"
+ARGS="--nodiscover --istanbul.blockperiod 5 --syncmode full --mine --minerthreads 1 --verbosity 5 --debug --metrics --gasprice 0 --targetgaslimit 804247552 --nat none"
 RPC_ARGS="--rpc --rpcaddr 0.0.0.0 --rpcapi admin,db,eth,debug,miner,net,shh,txpool,personal,web3,quorum,istanbul"
 
 #### Start node 1 #######################
