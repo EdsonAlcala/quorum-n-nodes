@@ -14,7 +14,7 @@ Taking that idea, how could I extend that behaviour and always have already know
 
 Get the latest version for the docker registry
 
-> docker pull edsonalcala/quorum-n-nodes:latest
+> docker pull edsonalcala/quorum-n-nodes:1.1-alpine
 
 If you want to build the image locally
 
