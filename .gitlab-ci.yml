@@ -19,7 +19,7 @@ docker build and publish:
     - IMAGE_ID=$(docker build --pull --quiet --tag $PROJECT_NAME:$SHORT_SHA .)
     - echo "$IMAGE_ID"
     - docker images
-    - docker tag $PROJECT_NAME:$SHORT_SHA $REPOSITORY_URI/$PROJECT_NAME:1.1-alpine
+    - docker tag $PROJECT_NAME:$SHORT_SHA $REPOSITORY_URI/$PROJECT_NAME:1.2-alpine
     - echo "Pushing to remote repository"
-    - docker --debug push $REPOSITORY_URI/$PROJECT_NAME:1.1-alpine
+    - docker --debug push $REPOSITORY_URI/$PROJECT_NAME:1.2-alpine
     - rm -f /root/.docker/config.json
